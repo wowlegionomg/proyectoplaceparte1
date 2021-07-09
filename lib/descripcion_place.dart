@@ -15,7 +15,12 @@ class DescripcionPlace extends StatelessWidget {
       margin: EdgeInsets.only(right: 20), //edgeinsetsonly
       child: Text(
         textoTitulo,
-
+        style: GoogleFonts.lato(
+          fontSize: 30,
+          fontWeight: FontWeight.bold,
+          //fontStyle: FontStyle.italic,
+        ),
+        //style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold), //textstyle
       ), //text
     ); //container
     //estrella
@@ -57,7 +62,9 @@ class DescripcionPlace extends StatelessWidget {
       margin: EdgeInsets.only(top: 10), //edgeinsetsonly
       child: Text(
         textoDescripcion,
-
+        style: GoogleFonts.lato(
+            color: Colors.black54
+        ),
         //style: TextStyle(color: Colors.black54), //textstyle
       ), //text
     ); //container
