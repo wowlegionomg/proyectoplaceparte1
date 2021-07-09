@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-
+import 'package:google_fonts/google_fonts.dart';
 
 class DescripcionPlace extends StatelessWidget {
   String textoTitulo;
