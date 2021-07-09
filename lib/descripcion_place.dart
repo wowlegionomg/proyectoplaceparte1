@@ -2,12 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
+
 class DescripcionPlace extends StatelessWidget {
   String textoTitulo;
   int cantidadEstrellas;
   String textoDescripcion;
   //CONTRUCTOR
-
+  DescripcionPlace(this.textoTitulo, this.cantidadEstrellas, this.textoDescripcion);
   @override
   Widget build(BuildContext context) {
     final titulo = Container(
@@ -15,7 +16,6 @@ class DescripcionPlace extends StatelessWidget {
       child: Text(
         textoTitulo,
 
-        //style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold), //textstyle
       ), //text
     ); //container
     //estrella
@@ -57,13 +57,15 @@ class DescripcionPlace extends StatelessWidget {
       margin: EdgeInsets.only(top: 10), //edgeinsetsonly
       child: Text(
         textoDescripcion,
-        style: GoogleFonts.lato(
-            color: Colors.black54
-        ),
+
         //style: TextStyle(color: Colors.black54), //textstyle
       ), //text
     ); //container
-
+    final descripcionPlace = Column(
+      children: <Widget>[
+        filatitulo,
+        descripcion
+      ], //widget
     ); //column
     return descripcionPlace;
   }
