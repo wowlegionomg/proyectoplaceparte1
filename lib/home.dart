@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'descripcion_place.dart';
 import 'review_list.dart';
 import 'review.dart';
+import 'gradient_back.dart';
+import 'home_app_bar.dart';
 import 'dart:ui' as ui;
 import 'package:google_fonts/google_fonts.dart';
 
@@ -39,12 +41,12 @@ class MyHome extends StatelessWidget {
 
     //scafold
     return Scaffold(
-        appBar: AppBar(
+        /*appBar: AppBar(
           title: Text("My places"), //text
-        ), //appbar
+        ), */
         body: Stack(
           children: <Widget>[
-            listview
+            GradienBack()
           ],
         )
     );
