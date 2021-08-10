@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'descripcion_place.dart';
+import 'review_list.dart';
 import 'review.dart';
 import 'dart:ui' as ui;
 import 'package:google_fonts/google_fonts.dart';
@@ -19,7 +20,22 @@ class MyHome extends StatelessWidget {
       margin: EdgeInsets.only(top: 300, left: 30, right: 30), //EdgeInsets.only
       height: 70,
       child:  Review("assets/images/personas/persona2.jpg","Maria Elena","1 review - 4 fotos",4,"Excelente lugar para estar un rato"),
-    ); //container
+    );
+
+    //reviewlist
+    final reviewList = Container(
+        margin: EdgeInsets.only(top: 20, left: 30, right: 30), //EdgeInsets.only
+        //height: 80,
+        child: ReviewList()
+    );
+
+    //Listview
+    final listview = ListView(
+      children:<Widget>[
+        descripcionPlace,
+        reviewList
+      ],
+    );
 
     //scafold
     return Scaffold(
@@ -28,9 +44,9 @@ class MyHome extends StatelessWidget {
         ), //appbar
         body: Stack(
           children: <Widget>[
-            review
-          ], //widget
-        ) //stack
-    ); //scafold
+            listview
+          ],
+        )
+    );
   }
 }
