@@ -10,26 +10,33 @@ class CardImage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     //cardimage
-    final cardimage= Container(
-      height: 200,
-      width: 200,
-      margin: EdgeInsets.all(80),
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(
-            path,
-          ),
-            fit: BoxFit.cover
+    final cardimage= Padding(
+      //height: 200,
+      padding: EdgeInsets.only(
+        top: 100,
+        right: 15,
+        bottom:20,
+      ),
+      child: Container(
+        width: 200,
+        //margin: EdgeInsets.all(80),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage(
+                  path,
+                ),
+                fit: BoxFit.cover
+            ),
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.all(Radius.circular(15)),
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                  color: Colors.black45,
+                  blurRadius: 15,
+                  offset: Offset(0,10)
+              )
+            ]
         ),
-        shape: BoxShape.rectangle,
-        borderRadius: BorderRadius.all(Radius.circular(15)),
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: Colors.teal,
-            blurRadius: 15,
-            offset: Offset(0,10)
-          )
-        ]
       ),
     );
     return cardimage;

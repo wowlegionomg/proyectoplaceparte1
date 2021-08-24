@@ -4,6 +4,7 @@ import 'dart:ui' as ui;
 import 'package:google_fonts/google_fonts.dart';
 import 'review.dart';
 import 'gradient_back.dart';
+import 'card_image_list.dart';
 class HomeAppBar extends StatelessWidget {
   String textotitulo;
   HomeAppBar(this.textotitulo);
@@ -28,7 +29,8 @@ class HomeAppBar extends StatelessWidget {
     final appBar= Stack(
       children:<Widget>[
         GradienBack(),
-        titulo
+        titulo,
+        CardImageList(),
       ],
     );
     return appBar;
