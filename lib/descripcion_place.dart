@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:google_fonts/google_fonts.dart';
+import 'rounded_button.dart';
 
 class DescripcionPlace extends StatelessWidget {
   String textoTitulo;
@@ -69,9 +70,11 @@ class DescripcionPlace extends StatelessWidget {
       ), //text
     ); //container
     final descripcionPlace = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         filatitulo,
-        descripcion
+        descripcion,
+        RoundedButton("Navigate")
       ], //widget
     ); //column
     return descripcionPlace;
