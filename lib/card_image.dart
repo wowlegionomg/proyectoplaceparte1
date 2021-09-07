@@ -4,13 +4,14 @@ import 'dart:ui' as ui;
 import 'package:google_fonts/google_fonts.dart';
 import 'review.dart';
 import 'gradient_back.dart';
+import 'fab_green.dart';
 class CardImage extends StatelessWidget{
   String path;
   CardImage(this.path);
   @override
   Widget build(BuildContext context) {
     //cardimage
-    final cardimage= Padding(
+    final card= Padding(
       //height: 200,
       padding: EdgeInsets.only(
         top: 100,
@@ -39,6 +40,15 @@ class CardImage extends StatelessWidget{
         ),
       ),
     );
-    return cardimage;
+
+    //stack
+    final cardImage=Stack(
+      alignment: Alignment(0.7, 0.95),
+      children: <Widget>[
+        card,
+        FabGreen()
+      ],
+    );
+    return cardImage;
   }
 }
